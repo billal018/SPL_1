@@ -23,7 +23,7 @@ while (running) {
     if (!pauseMenu.isPaused()) {
 
             game.PrintBoard();
-            System.out.println("Player Health: " + player.getHealth());
+            System.out.println("\u001B[31mPlayer Health: \u001B[0m" + player.getHealth());
             System.out.println("Enemy Health:  " + enemy.getHealth()+"\n");
             System.out.println("press 1 to attack:\t\t\t\t\tEnemy Killed:  " + count);
             System.out.println("press 2 to run:\t\t\t\t\t\tcollect coins: " + player.getCoin());
@@ -162,7 +162,7 @@ while (running) {
                           for(int j=(game.pcol)+1;j<game.Col-1;j++){
                                 game.board[game.prow][j] = '-';                               
                             } 
-                       game.PrintBoard();
+                          game.PrintBoard();
                        try {
                          Thread.sleep(2000);
                         } catch (InterruptedException e) {
