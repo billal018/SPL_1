@@ -4,20 +4,18 @@ import java.util.Scanner;
 public class Dungeon {
 
     public static void main(String[] args) {
-        ResumeManager resumeManager = new ResumeManager(); 
         GameBoard game = new GameBoard();
         Dungeon dungeon = new Dungeon();
         Buy by = new Buy();
+        ResumeManager resumeManager = new ResumeManager(); 
         game.CreateBoard(resumeManager);
-
-        
         Player player = new Player();
-
         Enemy enemy = new Enemy();
         Scanner sc = new Scanner(System.in);
         boolean running = true;
-        PauseMenu pauseMenu = new PauseMenu();
+        StopMenu stopMenu = new StopMenu();
         int count;
+        boolean check=false;
 
         if(resumeManager.resumeStatus()){
           int itemPos[] = resumeManager.getResumeData();
@@ -27,10 +25,17 @@ public class Dungeon {
         }
         
         int missAttack=0;
+        System.out.println("\n\n\t\t\t\u001B[32mWelcome to\n\n\t\t\tDUNGEON CRAWLER\u001B[0m");
+        try {
+          Thread.sleep(3000);
+          } catch (InterruptedException e) {
+          e.printStackTrace(); 
+          }
+          Clear.clearScreen();
 
 while (running) {
 
-    if (!pauseMenu.isPaused()) {
+    if (!stopMenu.isStoped()) {
 
             game.PrintBoard();
             System.out.println("\u001B[31mPlayer Health: \u001B[0m" + player.getHealth());
@@ -255,7 +260,7 @@ while (running) {
                          e.printStackTrace(); 
                          }
                           missAttack++;
-                        if(missAttack==3){
+                        if(missAttack==5){
                           running=false;
                           break;
                         }
@@ -281,9 +286,10 @@ while (running) {
 
                 case 5:
                     running = false;
+                    check=true;
                     break;
                 case 4:
-                      pauseMenu.Pause();
+                      stopMenu.stop();
                         break;  
 
                 default:
@@ -298,7 +304,7 @@ while (running) {
           else 
           {  
             Clear.clearScreen();
-             System.out.println("\u001B[33mGame Paused. Press 4 to resume.\u001B[0m");
+             System.out.println("\u001B[33mGame stop. Press 4 to resume.\u001B[0m");
              
                 int choice;
                 try {
@@ -312,14 +318,16 @@ while (running) {
                 }
                 if (choice== 4) {
                     Clear.clearScreen();
-                    pauseMenu.Pause();
+                    stopMenu.stop();
                     
                 }
           }
   }  
-       resumeManager.clearResumeFile();
-        System.out.println("The Game is Over (:");
+       if(check==false){
+          resumeManager.clearResumeFile();
+       }
+        System.out.println("\u001B[31mThe Game is Over (:\u001B[0m");
          Clear.clearScreen(); 
-        System.out.println("\t\t\t\t\t\t\t Final Score = " + count * 10);
+        System.out.println("\u001B[32m\t\t\t\t\t\t\t Final Score = \u001B[0m" + count * 10);
     }
 }

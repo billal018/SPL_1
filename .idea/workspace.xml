@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5936077a-ad37-4fae-8986-4435a52d575a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/StopMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Buy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dungeon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dungeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PauseMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PauseMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResumeManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/Buy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/Clear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/Dungeon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/Enemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/GameBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/PauseMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/ResumeManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/SPL1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL1/resume.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resume.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2UcaqAeHUZyh7z0e1AH3WxjuXHl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Md. Billal/OneDrive/SPL1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SPL1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SPL1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5936077a-ad37-4fae-8986-4435a52d575a" name="Changes" comment="" />
+      <created>1693241510269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693241510269</updated>
+      <workItem from="1693241511252" duration="3467000" />
+      <workItem from="1693329930023" duration="179000" />
+      <workItem from="1693330122695" duration="50000" />
+      <workItem from="1693330211797" duration="1070000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

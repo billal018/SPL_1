@@ -120,7 +120,7 @@ class Player
        System.out.println(" \u001B[32mPlayer attacked enemy for \u001B[0m" +enemy.health + "\u001B[32m damage.\u001B[0m");
        }
        else {
-        System.out.println(" \u001B[32mPlayer attacked enemy for \u001B[0m" + damage + "\u001B[32m damage.\u001B[0m");
+        System.out.println("\u001B[32mPlayer attacked enemy for \u001B[0m" + damage + "\u001B[32m damage.\u001B[0m");
        }
         enemy.takedamage(damage);
         
