@@ -44,9 +44,9 @@ class Enemy
        
         int damage = new Random().nextInt(10);
         if (player.getHealth() < damage) {
-            System.out.println("**  Enemy attacked player for " + player.getHealth() + " damage.");
+            System.out.println("\u001B[31mEnemy attacked player for \u001B[0m" + player.getHealth() + "\u001B[31m damage.\u001B[0m");
         } else {
-            System.out.println("**  Enemy attacked player for " + damage + " damage.");
+            System.out.println("\u001B[31mEnemy attacked player for \u001B[0m" + damage + " \u001B[31mdamage.\u001B[0m");
         }
         player.tokedamage(damage);
     }

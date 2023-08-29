@@ -34,16 +34,16 @@ while (running) {
 
             game.PrintBoard();
             System.out.println("\u001B[31mPlayer Health: \u001B[0m" + player.getHealth());
-            System.out.println("Enemy Health:  " + enemy.getHealth()+"\n");
-            System.out.println("press 1 to attack:\t\t\t\t\tEnemy Killed:  " + count);
-            System.out.println("press 2 to run:\t\t\t\t\t\tcollect coins: " + player.getCoin());
-            System.out.println("press 3 to buy: \t\t\t\t\tScore = " + (count * 10));
-            System.out.println("press 4 to pasue:");
-            System.out.println("press 5 to Exit:");
+            System.out.println("\u001B[31mEnemy Health:  \u001B[0m" + enemy.getHealth()+"\n");
+            System.out.println("\u001B[31mpress 1 to attack:\u001B[0m\t\t\t\t\t\u001B[32mEnemy Killed:  \u001B[0m" + count);
+            System.out.println("\u001B[31mpress 2 to run:\u001B[0m\t\t\t\t\t\t\u001B[32mcollect coins: \u001B[0m" + player.getCoin());
+            System.out.println("\u001B[31mpress 3 to buy: \u001B[0m\t\t\t\t\t\u001B[32mScore = \u001B[0m" + (count * 10));
+            System.out.println("\u001B[31mpress 4 to stop:\u001B[0m");
+            System.out.println("\u001B[31mpress 5 to Exit:\u001B[0m");
 
             resumeManager.setResumeData(game.prow, game.pcol, game.erow, game.ecol,player.getHealth(),enemy.getHealth(),player.getCoin(),count,(count * 10));
             
-            System.out.print("Enter your choice: ");
+            System.out.print("\u001B[33mEnter your choice: \u001B[0m");
         
 
 
@@ -52,7 +52,7 @@ while (running) {
                  try {
                      choice = sc.nextInt();
                     } catch (InputMismatchException e) {
-                          System.out.println("Invalid input. Please enter a valid number.");
+                          System.out.println("Invalid input");
                           sc.nextLine();
                           continue;
                        }
@@ -152,12 +152,12 @@ while (running) {
                             System.out.println(" ");
                             //
                             Clear.clearScreen();                        
-                            System.out.println("**Enemy defeated! :(");
-                            System.out.println("** HORRY :(");
+                            System.out.println("\u001B[32mEnemy defeated! :(\u001B[0m");
+                            System.out.println("\u001B[32m HORRY :(\u001B[0m");
                             count++;                           
                             Random random = new Random();
                             player.collectCoin(random.nextInt(1, 15));
-                            System.out.println("**New Enemy Appeared ");
+                            System.out.println("\u001B[32mNew Enemy Appeared \u001B[0m");
                             enemy = new Enemy();
                             game.board[game.erow][game.ecol] = ' ';
                          try {
@@ -247,8 +247,8 @@ while (running) {
 
                          player.Penalty();
                          Clear.clearScreen(); 
-                         System.out.println("Player loss his 5 health for penalty ):\n");
-                          System.out.println("OOh sad!! ):");
+                         System.out.println("\u001B[31mPlayer loss his 5 health for penalty ):\n\u001B[0m");
+                          System.out.println("\u001B[31mOOh sad!! ):\u001B[0m");
                          try {
                          Thread.sleep(2000);
                         } catch (InterruptedException e) {
@@ -298,14 +298,14 @@ while (running) {
           else 
           {  
             Clear.clearScreen();
-             System.out.println("Game Paused. Press 4 to resume.");
+             System.out.println("\u001B[33mGame Paused. Press 4 to resume.\u001B[0m");
              
                 int choice;
                 try {
                     choice = sc.nextInt();
                 } catch (InputMismatchException e) {
                      Clear.clearScreen();
-                    System.out.println("Invalid input. Please enter a number.");
+                    System.out.println("Invalid input");
                    
                     sc.nextLine();
                     continue;

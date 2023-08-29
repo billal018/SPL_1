@@ -66,7 +66,7 @@ public class GameBoard
         {
              board[prow][pcol]='P';
              Clear.clearScreen();
-             System.out.println("\nit's top.can't move up");
+             System.out.println("\u001B[31m\nit's top.can't move up\u001B[0m");
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -77,7 +77,7 @@ public class GameBoard
         else
         {  if(pcol==ecol && erow+1==prow){
               Clear.clearScreen();
-              System.out.println("\ncan't move up\n");
+              System.out.println("\u001B[31m\ncan't move up\n\u001B[0m");
                 try {
                  Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -99,7 +99,7 @@ public class GameBoard
         {
             board[prow][pcol]='P';
             Clear.clearScreen();
-            System.out.println("\nit's down.can't move down");
+            System.out.println("\u001B[31m\nit's down.can't move down\u001B[0m");
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -111,7 +111,7 @@ public class GameBoard
         {
            if(pcol==ecol && erow-1==prow){
               Clear.clearScreen();
-              System.out.println("\ncan't move down\n");
+              System.out.println("\u001B[31m\ncan't move down\n\u001B[0m");
                 try {
                  Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -135,7 +135,7 @@ public class GameBoard
         {    
               board[prow][pcol]='P';
               Clear.clearScreen();
-              System.out.println("\nit's most left.can't move left");
+              System.out.println("\u001B[31m\nit's most left.can't move left\u001B[0m");
                 try {
                   Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -147,7 +147,7 @@ public class GameBoard
         {   if(prow==erow && ecol+1==pcol)
             {
              Clear.clearScreen();   
-             System.out.println("\ncan't move left\n");
+             System.out.println("\u001B[31m\ncan't move left\n\u001B[0m");
                 try {
                  Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -170,7 +170,7 @@ public class GameBoard
         {
             board[prow][pcol]='P';
              Clear.clearScreen();
-             System.out.println("\nit's most right.can't move right");
+             System.out.println("\u001B[31m\nit's most right.can't move right\u001B[0m");
                try {
                  Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -183,7 +183,7 @@ public class GameBoard
            if(prow==erow &&pcol+1==ecol)
             { 
              Clear.clearScreen();   
-             System.out.println("\ncan't move right\n");
+             System.out.println("\u001B[31m\ncan't move right\n\u001B[0m");
                 try {
                   Thread.sleep(2000);
                 } catch (InterruptedException e) {

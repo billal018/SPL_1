@@ -40,12 +40,12 @@ class Player
         boolean run=true;
 
             while(run){
-                  System.out.println("1. Move Up");
-                  System.out.println("2. Move Down");
-                  System.out.println("3. Move left");
-                  System.out.println("4. Move Right");
-                  System.out.println("5. Exit");
-                  System.out.print("Enter your choice: ");
+                  System.out.println("\u001B[38;5;130mpress 1 to move up:\u001B[0m");
+                  System.out.println("\u001B[38;5;130mpress 2 to mode down:\u001B[0m");
+                  System.out.println("\u001B[38;5;130mpress 3 to moe left:\u001B[0m");
+                  System.out.println("\u001B[38;5;130mpress 4 to move right\u001B[0m");
+                  System.out.println("\u001B[38;5;130mpress 5 to Exit:\u001B[0m");
+                  System.out.print("\u001B[33mEnter your choice:\u001B[0m");
                 try{
 
                     int Choice = sc.nextInt();
@@ -73,14 +73,14 @@ class Player
                                      run=false;
                                      break;
                               default:
-                                      System.out.println("Invalid choice.");
+                                      System.out.println("\u001B[32mInvalid choice.\u001B[0m");
                                        break;
                             }
                 }
                 catch(InputMismatchException e)
                   {
                     Clear.clearScreen(); 
-                     System.out.println("Invalid input. Please enter a valid number.");
+                     System.out.println("\u001B[32mInvalid input.\u001B[0m");
                      game.PrintBoard();
                      sc.next();
 
@@ -117,10 +117,10 @@ class Player
        System.out.println(" "); 
        if(enemy.health<damage)
        {
-       System.out.println("**  Player attacked enemy for " +enemy.health + " damage.");
+       System.out.println(" \u001B[32mPlayer attacked enemy for \u001B[0m" +enemy.health + "\u001B[32m damage.\u001B[0m");
        }
        else {
-        System.out.println("**  Player attacked enemy for " + damage + " damage.");
+        System.out.println(" \u001B[32mPlayer attacked enemy for \u001B[0m" + damage + "\u001B[32m damage.\u001B[0m");
        }
         enemy.takedamage(damage);
         
@@ -136,7 +136,7 @@ class Player
         }   
         if (health == 0) {
             PlayerIsAlive=false;
-            System.out.println("Player has been defeated! ):");
+            System.out.println("\u001B[32mPlayer has been defeated! ):\u001B[0m");
           
         }
     }
