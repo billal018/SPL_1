@@ -5,8 +5,14 @@ class Enemy
     public int health;
     public boolean isAlive;
     public Enemy(){
+        ResumeManager  resumeManager = new ResumeManager();
         Random random = new Random();
-        health = random.nextInt(50) + 10;
+        if(resumeManager.resumeStatus()){
+          int itemPos[] = resumeManager.getResumeData();
+          health=itemPos[5];
+        }else{
+            health = random.nextInt(50) + 10;
+        }
         isAlive = true;      
     }
 
