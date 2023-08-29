@@ -2,21 +2,31 @@ import java.util.Random;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Dungeon {
-    //static 
-    int count = 0;
 
     public static void main(String[] args) {
+        ResumeManager resumeManager = new ResumeManager(); 
         GameBoard game = new GameBoard();
         Dungeon dungeon = new Dungeon();
         Buy by = new Buy();
-        game.CreateBoard();
+        game.CreateBoard(resumeManager);
+
+        
         Player player = new Player();
 
         Enemy enemy = new Enemy();
         Scanner sc = new Scanner(System.in);
         boolean running = true;
         PauseMenu pauseMenu = new PauseMenu();
-        int count = 0;
+        int count;
+
+        if(resumeManager.resumeStatus()){
+          int itemPos[] = resumeManager.getResumeData();
+          count=itemPos[7];
+        }else{
+          count=0;
+        }
+        
+        int missAttack=0;
 
 while (running) {
 
@@ -30,8 +40,14 @@ while (running) {
             System.out.println("press 3 to buy: \t\t\t\t\tScore = " + (count * 10));
             System.out.println("press 4 to pasue:");
             System.out.println("press 5 to Exit:");
+
+            resumeManager.setResumeData(game.prow, game.pcol, game.erow, game.ecol,player.getHealth(),enemy.getHealth(),player.getCoin(),count,(count * 10));
+            
             System.out.print("Enter your choice: ");
         
+
+
+
              int choice;
                  try {
                      choice = sc.nextInt();
@@ -198,7 +214,7 @@ while (running) {
                                 game.board[j][game.pcol] = '|';                               
                             } 
                        game.PrintBoard();
-                       try {
+                       try {              
                          Thread.sleep(2000);
                         } catch (InterruptedException e) {
                              e.printStackTrace(); 
@@ -230,7 +246,6 @@ while (running) {
                     }       
 
                          player.Penalty();
-                       ///
                          Clear.clearScreen(); 
                          System.out.println("Player loss his 5 health for penalty ):\n");
                           System.out.println("OOh sad!! ):");
@@ -239,6 +254,11 @@ while (running) {
                         } catch (InterruptedException e) {
                          e.printStackTrace(); 
                          }
+                          missAttack++;
+                        if(missAttack==3){
+                          running=false;
+                          break;
+                        }
                         Clear.clearScreen();
                         game.board[game.erow][game.ecol] = ' ';
                         game.AddEnemy();
@@ -296,8 +316,8 @@ while (running) {
                     
                 }
           }
-}
-
+  }  
+       resumeManager.clearResumeFile();
         System.out.println("The Game is Over (:");
          Clear.clearScreen(); 
         System.out.println("\t\t\t\t\t\t\t Final Score = " + count * 10);
