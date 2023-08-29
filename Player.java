@@ -8,11 +8,22 @@ class Player
     public  boolean PlayerIsAlive;
     public int count=0;
     Scanner sc=new Scanner(System.in);
+    ResumeManager  resumeManager = new ResumeManager();
 
     public  Player()
     {
-        health=100;
-        coins=0;
+
+        if(resumeManager.resumeStatus()){
+          int itemPos[] = resumeManager.getResumeData();
+          health=itemPos[4];
+          coins=itemPos[6];
+        }else{
+          health=100;
+          coins=0;
+        }
+
+
+
         PlayerIsAlive=true;
     }
 
