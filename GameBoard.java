@@ -9,28 +9,36 @@ public class GameBoard
     {
       board=new char[Row][Col];  
     }
-    public void CreateBoard()
+    public void CreateBoard(ResumeManager resumeManager)
     {
-        for(int i=0;i<Row;i++)
-        {
-            for(int j=0;j<Col;j++)
-            {
-                if(i==0 || i==Row-1 || j==0 || j==Col-1)
-                {
+        for(int i=0;i<Row;i++){
+            for(int j=0;j<Col;j++){
+                if(i==0 || i==Row-1 || j==0 || j==Col-1){
                     board[i][j] = '*';
+                }else{
+                    board[i][j] = ' ';
                 }
-                else
-                {
-                     board[i][j] = ' ';
-                }
-               
             }
         }
 
-        prow=Row-6;
-        pcol=Col-48;
-        board[prow][pcol]='P';
-        AddEnemy();
+
+        if(resumeManager.resumeStatus()){
+            int itemPos[] = resumeManager.getResumeData();
+            prow=itemPos[0];
+            pcol=itemPos[1];
+            board[prow][pcol]='P';
+
+            erow=itemPos[2];
+            ecol=itemPos[3];
+            board[erow][ecol]='E';
+        }else{
+            prow=Row-6;
+            pcol=Col-48;
+            board[prow][pcol]='P';
+
+            AddEnemy();
+        }
+        
     }
     public void AddEnemy()
     {
